@@ -220,7 +220,7 @@ body{
 }
 @media (max-width: 768px) {
   .bannerSection {
-    background-image: url('/img/img5.jpg'); 
+    background-image: url('img/headerimg.jpg'); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
