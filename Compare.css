@@ -1,0 +1,510 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    overflow-x: hidden;
+    background-image: url(img/img6.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+        
+}
+
+/* header------------------------------------------------------------------------------------------------------------ */
+.navbar-brand img {
+    height: 60px;
+    width: 56px;
+}
+
+.btn-signin {
+    border-radius: 50px;
+    border: 1px solid #14a0fd;
+    color: #14a0fd;
+}
+
+.btn-signin:hover {
+    background-color: #ebf3ff;
+}
+
+@media (max-width: 993px) {
+    .navlinks {
+        margin-top: 10px;
+    }
+
+}
+
+.navlinks {
+    font-size: 18px;
+}
+
+.navbar {
+    position: relative;
+}
+
+.nav-link {
+    color: #444444;
+    padding: 8px 14px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .navlinks {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 999;
+        margin-top: 2px;
+        /* yeh important */
+        padding-top: 0;
+        /* yeh bhi */
+    }
+
+    .navbar-nav {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        min-width: 150px;
+        /* jitna chaho itna badha sakti ho */
+        margin-top: 5px;
+        background-color: rgb(136, 202, 238);
+        padding: 0.5rem;
+        border-radius: 5px;
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    background: linear-gradient(to right, rgba(13, 129, 206, 0.993), rgb(87, 244, 255));
+
+}
+
+.nav-link:hover {
+    background-color: rgb(177, 226, 255);
+    color: white;
+}
+
+.nav-link:hover::before {
+    opacity: 100;
+}
+
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.4s ease-in-out;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1000;
+    background-color: rgb(207, 236, 255);
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.custom-toggler {
+    border: none;
+    background: transparent;
+    padding: 0.25rem;
+    position: relative;
+    z-index: 9999;
+}
+
+.toggler-icon {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #333;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-toggler.collapsed .top-bar {
+    transform: rotate(0) translateY(0);
+}
+
+.custom-toggler:not(.collapsed) .top-bar {
+    transform: rotate(45deg) translateY(6px);
+}
+
+.custom-toggler.collapsed .middle-bar {
+    opacity: 1;
+}
+
+.custom-toggler:not(.collapsed) .middle-bar {
+    opacity: 0;
+}
+
+.custom-toggler.collapsed .bottom-bar {
+    transform: rotate(0) translateY(0);
+}
+
+.custom-toggler:not(.collapsed) .bottom-bar {
+    transform: rotate(-45deg) translateY(-6px);
+}
+
+/* comapre phones===================================================================================== */
+
+   @keyframes slideIn {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .slide-text2 {
+    animation: slideIn 1s ease-out forwards;
+  }
+
+  /* Text Styling */
+  h1 {
+    padding-top: 35px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2% 17%;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+      padding-top: 20px;
+    }
+
+    p {
+      font-size: 1rem;
+      padding: 0 10%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.6rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      padding: 0 5%;
+    }
+  }
+
+  
+  .ComSection{
+    height: auto;
+    background-color: #001c3f42;
+
+  }
+  .containerC {
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+  }
+  .card h2{
+    color: #129ed6;
+    font-weight: bold;
+  }
+  
+  .card {
+    background: rgb(255, 255, 255);
+    padding: 20px 30px;
+    margin:35px 0px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 350px;
+    text-align: center;
+  }
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #d6faff;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  select:hover{
+    background-color: #dfe5ff;
+
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  table, th, td {
+    border: 1px solid #b7beff;
+  }
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  th {
+    background-color: #dfe5ff;
+  }
+ 
+
+/* .............................FOOTER.................................................................. */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  /* Footer Background */
+  footer {
+    width: 100%;
+    background-color: #d6eaff; /* Soft light blue */
+  }
+  
+  /* Branding Section Top */
+  .FT-brandlogo {
+    width: 88.7%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #d6eaff;
+    padding-top: 20px;
+  }
+  
+  .footLogo {
+    height: 50px;
+    width: 53px;
+  }
+  
+  .footText h2 {
+    padding-top:5px ;
+    font-size: 1.8rem;
+    color: #120948;
+    font-weight: bold;
+  }
+  
+  /* Main Footer Container */
+  .FT-containerF {
+    width: 88.7%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 0px 0 0;
+    background-color: #d6eaff;
+  }
+  
+  /* Footer Child Sections */
+  .FT-child1,
+  .FT-child2 {
+    text-align: left;
+    background-color: #d6eaff;
+  }
+  
+  /* Footer Lists */
+  .FT-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .FT-li {
+    font-size: 1rem;
+    line-height: 2rem;
+    color: #120948;
+  }
+  .FT-list a{
+    text-decoration: none;
+  }
+  /* Footer Headings */
+  .FT-containerF h3 {
+    margin-bottom: 10px;
+    color: #120948;
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+  
+  /* Social Media Icons */
+  .footerContainer {
+    width: 100%;
+    padding: 0px 10px 0 0;
+    background-color: #d6eaff;
+  }
+  
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #002152;
+    margin:0px 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .socialIcons a i {
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+  
+  /* Hover Effect */
+  .socialIcons a:hover {
+    background-color: #58a6ff;
+    transition: 0.3s;
+  }
+  
+  .socialIcons a:hover i {
+    color: #002249;
+  }
+  
+  /* Footer Bottom Copyright */
+  .footerBottom {
+    background-color: #d6eaff;
+    padding: 0px 0;
+    text-align: center;
+  }
+  
+  .footerBottom p {
+    font-size: 1rem;
+    color: #3b3b3b;
+    margin-bottom: 0%;
+    padding: 5px;
+  }
+  
+  .designer {
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  .FT-child1 .FT-child2 {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  
+  /* ---------------- Responsive Design ---------------- */
+  
+  /* Medium Devices (Tablet) */
+  @media (max-width: 768px) {
+    .FT-brandlogo {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .footText h2 {
+        margin-left: 0;
+    }
+    .FT-containerF {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .FT-child1,
+    .FT-child2,
+    .footText {
+        text-align: center;
+    }
+  
+    .footLogo {
+        height: 50px;
+        width: 46px;
+    
+  }
+  .FT-child1{
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+  }
+  .FT-child2{
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+  }
+  .FT-child4{
+    margin-top: 5px;
+    padding-top: 10px;
+  }
+  .FT-child3{
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+  }
+  .FT-child2 h3{
+    font-weight: bold;
+  }
+  .FT-child4 h3{
+    font-weight: bold;
+  }}
+  /* Small Devices (Mobile) */
+  @media (max-width: 480px) {
+    .footText h2 {
+        font-size: 1.5rem;
+        margin-left: 0;
+    }
+    .FT-li,
+    .footerBottom p {
+        font-size: 0.9rem;
+    }
+    .socialIcons a {
+        padding: 8px;
+    }
+    .socialIcons a i {
+        font-size: 1.2rem;
+    }
+  }

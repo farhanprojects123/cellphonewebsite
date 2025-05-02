@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="Contact.css">
+    <link rel="shortcut icon" href="img/logo 4.png" type="image/x-icon">
+</head>
+
+<body>
+  <!-- header----------------------------------------------------------------------------------------------------- -->
+  <nav class="navbar navbar-expand-md  border-bottom shadow-sm" style="background-color: rgb(248, 252, 255);">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="img/logo 4.png" alt="Logo">
+        <span class="ms-1 fw-semibold text-dark" style=" font-size: 30px; ">cellinfo</span>
+      </a>
+      <style>
+
+      </style>
+      <!--  Toggler -->
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="toggler-icon top-bar"></span>
+        <span class="toggler-icon middle-bar"></span>
+        <span class="toggler-icon bottom-bar"></span>
+      </button>
+
+
+      <!-- Nav links / Sign In button -->
+      <div class="navlinks collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="allphones.html">All Phones</a>
+          </li>
+
+          <!-- brands dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="brandToggle">Brands</a>
+            <ul class="dropdown-menu" id="brandMenu">
+              <li><a class="dropdown-item" href="oppo.html">Oppo</a></li>
+              <li><a class="dropdown-item" href="iphone.html">Apple</a></li>
+              <li><a class="dropdown-item" href="oneplus.html">Oneplus</a></li>
+              <li><a class="dropdown-item" href="infinix.html">Infinix</a></li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="Compare.html">Compare Phones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contactus.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+       <!-- Sign In -->
+       <div class="d-none d-lg-block ms-3">
+        <a href="#" id="signinBtn" class="btn btn-sm btn-signin px-3 py-1" style="font-size: 18px;">Sign In</a>
+      </div>
+      
+      <!-- Bootstrap Alert Message -->
+      <div id="signinAlert" class="alert alert-info alert-dismissible fade position-fixed top-0 start-50 translate-middle-x  px-5 py-3" role="alert" style="display: none; z-index: 1055; margin-top: 100px; color: black; border-radius: 10px; border: 3px solid white;  box-shadow:0 4px 8px rgba(0, 0, 0, 0.4) ;">
+        <strong>You are successfully logged in.</strong><br>
+        Welcome to CellInfo!
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <!-- slide text---------------------------------------------------------------------------- -->
+
+
+  <div class="MN-marquee-wrapper">
+    <div class="MN-marquee-text">
+      Got any Questions? We’d love to hear. Whether you’re curious about our service, our status, or returns – we’re
+      ready to answer any and all questions.
+      Got any Questions? We’d love to hear. Whether you’re curious about our service, our status, or returns – we’re
+      ready to answer any and all questions.
+      Got any Questions? We’d love to hear. Whether you’re curious about our service, our status, or returns – we’re
+      ready to answer any and all questions.
+
+    </div>
+  </div>
+
+  <!-- form-------------------------------------------------------------------------------------------------------- -->
+
+  <section class="ConFormSect">
+    <div class="slideIn2 ConContainer">
+      <form onsubmit="return SubmitForm()">
+        <h1 class="ConHeading">Contact Us</h1>
+
+        <input type="text" id="name" class="ConInput" placeholder="First Name">
+        <div id="ErrorName" class="ConError">Please enter your name.</div>
+
+        <input type="email" id="email" class="ConInput" placeholder="Email Address">
+        <div id="ErrorEmail" class="ConError">Please enter a valid email address.</div>
+
+        <input type="text" id="mobile" class="ConInput" placeholder="Mobile Number">
+        <div id="ErrorMobile" class="ConError">Please enter a valid mobile number.</div>
+
+        <textarea id="message" class="ConInput" placeholder="Type your message here..."></textarea>
+        <div id="ErrorMessage" class="ConError">Please enter your message.</div>
+
+        <input type="submit" value="Send" id="ConButton">
+      </form>
+
+      <div id="alertonsubmit" class="ConAlert">✅ Your form has been submitted!</div>
+    </div>
+
+  </section>
+
+  <!-- Get in touch-------------------------------------------------------------------------------------------------- -->
+  <div class="MN-container">
+    <h1><b>Get in touch</b></h1>
+    <div class="MN-info">
+      <p>Please get in touch with us at 2466, 2469 and we’ll take it from here.</p>
+      <div class="MN-info-item">
+        <img src="https://img.icons8.com/ios-filled/50/4db8ff/phone.png" alt="Phone Icon">
+        <span>+001-28272300 , 2466, 2469 </span>
+      </div>
+      <div class="MN-info-item">
+        <img src="https://img.icons8.com/ios-filled/50/4db8ff/new-post.png" alt="Email Icon">
+        <span>webmaster@cellinfo.com</span>
+      </div>
+    </div>
+
+    <div class="MN-locations">
+      <div class="MN-locations-box">
+        <img src="https://img.icons8.com/ios-filled/50/4db8ff/marker.png" alt="Offices Icon">
+        <p>3 Offices & Expanding</p>
+      </div>
+      <div class="MN-locations-box">
+        <img src="https://img.icons8.com/ios-filled/50/4db8ff/warehouse.png" alt="Warehouses Icon">
+        <p>3 Warehouses across Pakistan</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- map----------------------------------------------------------------------------------------------------------- -->
+  <section class="mapSect">
+    <h2 class="us-map-heading">Find Us on the Map</h2>
+
+    <div class="us-map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.074299888011!2d-122.41941518468124!3d37.77492977975925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064df4b79e1%3A0x9c9ccf1cf86be0ef!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1615406622288!5m2!1sen!2sus"
+        loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </section>
+
+  <!-- ...footer...............................................................---------------------------------... -->
+  <footer>
+    <div class="ContactLogo">
+      <div class="FT-brandlogoIMG">
+        <img class="footLogo" src="img/logo 4.png" alt="">
+      </div>
+      <div class="footText">
+        <h2>cellinfo</h2>
+      </div>
+    </div>
+
+    <div class="socialIcons">
+      <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.google.com"><i class="fab fa-google-plus"></i></a>
+      <a href=" https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <!-- JAVA SCRIPT LINK -->
+  <script src="contact.js"></script>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="compare.js"></script>
+
+</body>
+
+</html>
